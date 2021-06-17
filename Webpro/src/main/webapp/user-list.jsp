@@ -4,10 +4,8 @@
         <html>
 
         <head>
-            <title>User Record Maintenance</title>
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous">
+                    <title>User Record Maintenance</title>
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         </head>
 
         <body>
@@ -26,14 +24,13 @@
                     <h3 class="text-center">List of User(s)</h3>
                     <hr>
                     <div class="container text-left">
-                        <a href="<%=request.getContextPath()%>/new" class="btn btn-success">Create
-     New User</a>
+                         <a href="<%=request.getContextPath()%>/new" class="btn btn-success">Create New User</a>
                     </div>
                     <br>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>S.NO</th>
+                                <th>S.No</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Country</th>
@@ -57,7 +54,7 @@
                                     <td>
                                         <c:out value="${user.country}" />
                                     </td>
-                                    <td><a href="<%=request.getContextPath()%>/new"=<c:out value='${user.id}' />>Create</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit?id=<c:out value='${user.id}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=<c:out value='${user.id}' />">Delete</a></td>
+                                    <td><a href="<%=request.getContextPath()%>/new" class="btn btn-light">Create</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit?id=<c:out value='${user.id}' />" class="btn btn-light">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?id=<c:out value='${user.id}' />"class="btn btn-light">Delete</a></td>
                                 </tr>
                             </c:forEach>
                             <!-- } -->
