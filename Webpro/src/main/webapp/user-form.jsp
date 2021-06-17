@@ -23,7 +23,7 @@
                 
             </header>
             <br>
-            <div class="container col-md-5">
+             <div class="container col-md-5">
                 <div class="card">
                     <div class="card-body">
                         <c:if test="${user != null}">
@@ -34,7 +34,7 @@
                         </c:if>
 
                         <caption>
-                            <h2>
+                            <h2 align="center">
                                 <c:if test="${user != null}">
                                     Edit User
                                 </c:if>
@@ -47,20 +47,38 @@
                         <c:if test="${user != null}">
                             <input type="hidden" name="id" value="<c:out value='${user.id}' />" />
                         </c:if>
-
-                        <fieldset class="form-group">
-                            <label>User Name</label> <input type="text" value="<c:out value='${user.name}' />" class="form-control" name="name" required="required">
-                        </fieldset>
-
-                        <fieldset class="form-group">
-                            <label>User Email</label> <input type="text" value="<c:out value='${user.email}' />" class="form-control" name="email" required="required">
-                        </fieldset>
-
-                        <fieldset class="form-group">
-                            <label>User Country</label> <input type="text" value="<c:out value='${user.country}' />" class="form-control" name="country" required="required">
-                        </fieldset>
-
-                        <button type="submit" class="btn btn-info">Create</button>
+                        
+                        <br>
+                        <div class="form-group row">
+    					<label for="colFormLabel" class="col-sm-3 col-form-label">User Name</label>
+    					<div class="col-sm-9">
+      					<input type="text" value="<c:out value='${user.name}' />" class="form-control" name="name" required="required">
+    					</div>
+  						</div>
+  						
+                        <div class="form-group row">
+    					<label for="colFormLabel" class="col-sm-3 col-form-label">User Email</label>
+    					<div class="col-sm-9">
+      					<input type="email" value="<c:out value='${user.email}' />" class="form-control" placeholder="username@example.com" name="email" required="required">
+    					</div>
+  						</div>
+  						
+                        
+                        <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">User Country</label>  
+                        <div class="col-sm-4">
+                        <input list="browsers" value="<c:out value='${user.country}' />"class="form-control" name="country" required="required">
+                        <datalist id="browsers">
+  							<option>India</option>
+  							<option>United States</option>
+  							<option>United Kingdom</option>
+  							<option>Germany</option>
+  							</datalist>
+  							</div>
+						</div>
+						
+                        
+                        <button type="submit" style="margin-left: 40%" class="btn btn-info">Create</button>
                         </form>
                     </div>
                 </div>
